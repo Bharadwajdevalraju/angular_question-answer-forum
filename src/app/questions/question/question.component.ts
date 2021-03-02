@@ -18,13 +18,10 @@ export class QuestionComponent implements OnInit {
   ngOnInit(): void {
     var id=this.route.snapshot.params['id'];  
     this.question=this.questionsService.findQuestionById(+id);
-    this.questionsService.questionEmitter.subscribe(question=>{
-      this.question=question;
+    this.route.params.subscribe((params:Params)=>{
+      var id=params['id'];
+      this.question=this.questionsService.findQuestionById(+id);
     });
-    // this.route.params.subscribe((params:Params)=>{
-    //   var id=params['id'];
-    //   this.question=this.questionsService.findQuestionById(+id);
-    // });
   }
 
 }

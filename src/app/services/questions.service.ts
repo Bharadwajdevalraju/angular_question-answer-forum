@@ -13,7 +13,6 @@ export class QuestionsService {
 
     questionsEmitter =new EventEmitter<Question[]>();
 
-    questionEmitter =new EventEmitter<Question>();
 
     getAllQuestions(){
         return this.questions.slice();

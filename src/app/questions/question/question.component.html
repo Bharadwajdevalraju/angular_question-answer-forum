@@ -1,4 +1,4 @@
- <div class="card question-container">
+  <div class="card question-container" *ngIf="question!=null">
     <div class="card-body">
       <h5 class="card-title">{{question.question}}</h5>
       <p class="card-text">{{question.questionDescription}}</p>
