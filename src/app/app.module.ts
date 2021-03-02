@@ -9,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { QuestionComponent } from './questions/question/question.component';
 import { QuestionsService} from './services/questions.service'
+import {  HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { QuestionsService} from './services/questions.service'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [QuestionsService],
   bootstrap: [AppComponent]

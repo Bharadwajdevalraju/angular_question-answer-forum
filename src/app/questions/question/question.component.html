@@ -1,19 +1,12 @@
-<div class="card question-container">
+ <div class="card question-container">
     <div class="card-body">
-      <h5 class="card-title">Question Text</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <p class="created-by"><b>created by:</b> John</p>
+      <h5 class="card-title">{{question.question}}</h5>
+      <p class="card-text">{{question.questionDescription}}</p>
+      <p class="created-by"><b>created by:</b> {{question.createdBy}}</p>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">Answer 1
-        <p class="created-by"><b>answered by:</b> Zack</p>
-      </li>
-      <li class="list-group-item">Answer 2
-        <p class="created-by"><b>answered by:</b> Zeff</p>
-      </li>
-      <li class="list-group-item">Answer 3
-        <p class="created-by"><b>answered by:</b> Synder</p>
-      </li>
-     
+      <li class="list-group-item" *ngFor="let answer of question.answers">{{answer.answer}}
+        <p class="created-by"><b>answered by:</b> {{answeredBy}}</p>
+      </li>     
     </ul>
-  </div>
+  </div> 

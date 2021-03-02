@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  searchtext:string='hi';
   title = 'question-answer-forum';
 }
