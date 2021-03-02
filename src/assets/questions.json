@@ -1,0 +1,37 @@
+[{
+    "id":1,
+    "question":"question text-1",
+    "questionDescription":"question description here ....",
+    "createdBy":"john",
+    "answers":[{
+        "id":1,
+        "answer":"answer here",
+        "answeredBy":"person-1"
+    },{
+        "id":2,
+        "answer":"answer 2 here",
+        "answeredBy":"person-2"
+    },{
+        "id":3,
+        "answer":"answer 3 here",
+        "answeredBy":"person-3"
+    }]
+},{
+    "id":2,
+    "question":"question text-2",
+    "questionDescription":"question 2 description here ....",
+    "createdBy":"Zack",
+    "answers":[{
+        "id":3,
+        "answer":"answer here",
+        "answeredBy":"person-1"
+    },{
+        "id":4,
+        "answer":"answer 2 here",
+        "answeredBy":"person-2"
+    },{
+        "id":5,
+        "answer":"answer 3 here",
+        "answeredBy":"person-3"
+    }]
+}]

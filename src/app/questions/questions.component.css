@@ -1,0 +1,10 @@
+.question-container{
+    width: 90%;
+    margin:60px;
+    padding: 10px;
+    cursor: pointer;
+}
+.created-by{
+    text-align: right;
+    margin-right: 20px;
+}
