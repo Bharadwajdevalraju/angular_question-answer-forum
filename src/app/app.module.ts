@@ -10,6 +10,7 @@ import { QuestionsComponent } from './questions/questions.component';
 import { QuestionComponent } from './questions/question/question.component';
 import { QuestionsService} from './services/questions.service'
 import {  HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {  HttpClientModule } from '@angular/common/http';
     QuestionComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule

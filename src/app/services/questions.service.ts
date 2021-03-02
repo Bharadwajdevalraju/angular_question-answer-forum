@@ -20,19 +20,10 @@ export class QuestionsService {
     }
 
     findQuestionById(id:number){
-        console.log('hii');
-        this.getJSON().subscribe(data => {
-           // this.questions.push(...data)
-            //console.log(this.questions);
-            this.questions.forEach(question => {
-                if(question.id===id){
-                    console.log(question);
-                    this.questionEmitter.emit(this.question);
-                    return question;
-                }
-            });
-        });     
-       return null;
+        const question=this.questions.find(q=>{
+            return q.id===id;
+        });
+        return question;
     }
 
    constructor(private http: HttpClient) { 

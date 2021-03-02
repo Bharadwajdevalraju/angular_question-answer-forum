@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  searchtext:string='hi';
+  searchtext:string="";
   title = 'question-answer-forum';
+
+  constructor(private router:Router){}
+  onSearch(){
+    this.router.navigate(['/questions']);
+  }
 }
