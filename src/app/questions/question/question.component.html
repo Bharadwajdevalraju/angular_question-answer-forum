@@ -5,8 +5,9 @@
       <p class="created-by"><b>created by:</b> {{question.createdBy}}</p>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item" *ngFor="let answer of question.answers">{{answer.answer}}
-        <p class="created-by"><b>answered by:</b> {{answeredBy}}</p>
+      <li class="list-group-item"  *ngFor="let answer of question.answers">{{answer.answer}}
+        <p class="created-by"><b>answered by:</b> {{answer.answeredBy}}</p>
+        <p class="created-by"><b>answered on:</b> {{answer.answeredOn}}</p>
       </li>     
     </ul>
   </div> 

@@ -1,3 +1,3 @@
 export class Answer{
-    constructor(public id:number,answer:string,answerBy:string,time:Date){}
+    constructor(public id:number,public answer:string,public answeredBy:string,public answeredOn:string){}
 }

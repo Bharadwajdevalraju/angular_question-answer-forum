@@ -32,6 +32,12 @@ export class QuestionsService {
     });     
     }
 
+    findByQuestionText(searchtext:string){
+        const questions=this.questions.filter(q=>{
+            return q.question.includes(searchtext);
+        });
+        return questions;
+    }
     
 
     public getJSON(): Observable<any> {

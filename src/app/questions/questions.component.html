@@ -1,8 +1,9 @@
-<div class="card question-container jumbotron"  *ngFor="let question of questions" [routerLink]="['/question',question.id]">
+<div class="card question-container jumbotron" *ngFor="let question of questions" [routerLink]="['/question',question.id]">
     <div class="card-body">
       <h5 class="card-title">{{question.question}}</h5>
       <p class="card-text">{{question.questionDescription}}</p>
       <p class="created-by"><b>created by:</b> {{question.createdBy}}</p>
+      <p class="created-by"><b>created On:</b> {{question.createdOn}}</p>
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">Number of answers: {{question.answers.length}}</li>

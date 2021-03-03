@@ -1,0 +1,21 @@
+[{
+    "firstname":"john",
+    "lastname":"doe",
+    "email":"jdoe@gmail.com",
+    "password":"qwerty"
+},{
+    "firstname":"jack",
+    "lastname":"synder",
+    "email":"jsynder@gmail.com",
+    "password":"pass@123"
+},{
+    "firstname":"david",
+    "lastname":"richard",
+    "email":"drichard@gmail.com",
+    "password":"pass@234"
+},{
+    "firstname":"levis",
+    "lastname":"richard",
+    "email":"test",
+    "password":"test"
+}]

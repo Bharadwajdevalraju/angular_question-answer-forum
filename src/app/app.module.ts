@@ -11,6 +11,9 @@ import { QuestionComponent } from './questions/question/question.component';
 import { QuestionsService} from './services/questions.service'
 import {  HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { QuestionNotFoundComponent } from './question-not-found/question-not-found.component';
+import { UserService } from './services/user.service';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     RegisterComponent,
     QuestionsComponent,
-    QuestionComponent
+    QuestionComponent,
+    QuestionNotFoundComponent,
+    ProfileComponent
   ],
   imports: [
     FormsModule,

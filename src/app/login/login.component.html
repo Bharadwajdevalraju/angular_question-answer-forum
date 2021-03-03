@@ -1,8 +1,9 @@
 <div class="login">
-    <div class="jumbotron">         
-        <input type="text" id="login"  name="username" class="form-control" placeholder="username"><br>
-        <input type="text" id="password"  name="password" class="form-control" placeholder="password"><br>
-        <button class="btn btn-md btn-primary">login</button>
-    </div>
+    <form class="jumbotron">         
+        <input type="text" id="login"  name="username" class="form-control" placeholder="username" #username required><br>
+        <input type="password" id="password"  name="password" class="form-control" placeholder="password" #password required><br>
+        <p class="warning-message">{{warningMessage}}</p>
+        <button class="btn btn-md btn-primary" (click)="authenticate()">login</button>
+    </form>
   </div>
  
