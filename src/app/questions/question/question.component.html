@@ -10,4 +10,9 @@
         <p class="created-by"><b>answered on:</b> {{answer.answeredOn}}</p>
       </li>     
     </ul>
+    <form class="ans" [ngStyle]="{display:!canAnswer?'none':true}">
+      <textarea type="text"  name="answer" class="form-control" placeholder="answer" [(ngModel)]="answer" required></textarea>
+      <br>
+      <button class="btn btn-primary btn-md"  (click)="addAnswer()">Add answer</button>
+    </form>
   </div> 

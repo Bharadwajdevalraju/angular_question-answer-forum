@@ -17,11 +17,12 @@ const routes: Routes = [
   {path:'profile',component:ProfileComponent},
   {path:'questions/:searchtext',component:QuestionsComponent},
   {path:'question/:id',component:QuestionComponent},
-  {path:'noquestionsfound',component:QuestionNotFoundComponent}
+  {path:'noquestionsfound',component:QuestionNotFoundComponent},
+  {path:'**',redirectTo:''}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -11,6 +11,7 @@ import {Question} from '../app/models/question'
 export class AppComponent implements DoCheck{
   searchtext:string="";
   title = 'question-answer-forum';
+  profileName="";
 
   disableLoginAndRegister:boolean=false;
 
@@ -19,16 +20,21 @@ export class AppComponent implements DoCheck{
   }
 
   ngDoCheck() :void{
-    JSON.parse(localStorage.getItem("user"))==null?this.disableLoginAndRegister=false
+    let  user=JSON.parse(localStorage.getItem("user"));
+    user==null?this.disableLoginAndRegister=false
     :this.disableLoginAndRegister=true;
+    if(this.disableLoginAndRegister){
+      this.profileName=user.firstname+" "+user.lastname
+    }
   }
   
   onSearch(){
     this.router.navigate(['/questions',this.searchtext]);
+    this.searchtext=""
   }
 
   onLogout(){
-    localStorage.clear();
+    localStorage.setItem("user",null);
     this.router.navigate(['/']);
     this.disableLoginAndRegister=false
   }

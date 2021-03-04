@@ -5,7 +5,7 @@
   </button>
   
 
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+  <div class="navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
         <a class="nav-link nav-option" [routerLink]="['/']" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:
@@ -25,6 +25,9 @@
       </li>
       <li class="nav-item">
         <button class="btn btn-info mr-2" type="submit" [routerLink]="['/register']" [ngStyle]="{'display':disableLoginAndRegister?'none':''}">Register</button>
+      </li>
+      <li class="nav-item">
+        <h6 class="profile-name" [ngStyle]="{'display':!disableLoginAndRegister?'none':''}">{{profileName}}</h6>
       </li>
       <li class="nav-item">
         <button class="btn btn-danger mr-2" type="submit" (click)="onLogout()"  [ngStyle]="{'display':!disableLoginAndRegister?'none':''}">Logout</button>

@@ -9,3 +9,9 @@
       <li class="list-group-item">Number of answers: {{question.answers.length}}</li>
     </ul>
   </div>
+  <form class="question" [ngStyle]="{display:!canQuestion?'none':true}">
+    <input type="text" name="question" class="form-control" placeholder="question" [(ngModel)]="question">
+    <textarea type="text"  name="question" class="form-control" placeholder="Question  Description" [(ngModel)]="questionDescription" required></textarea>
+    <br>
+    <button class="btn btn-primary btn-md"  (click)="addQuestion()">Add Question</button>
+  </form>
